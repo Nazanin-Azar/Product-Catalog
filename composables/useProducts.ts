@@ -1,5 +1,5 @@
 import { useAsyncData } from "nuxt/app";
-import { Product } from "~/types";
+import type { Product } from "~/types/product";
 
 export const useProducts = () => {
     const API_URL = 'https://dummyjson.com/products';
