@@ -38,12 +38,10 @@
         </div>
       </div>
       <div v-if="products.length > 8" class="flex justify-end mt-10 mb-10">
-        <NuxtLink
-          to="/product/products"
-          class="inline-flex items-center gap-2 py-2 px-6 border border-gray-300 rounded-full text-gray-800 font-semibold hover:bg-gray-100 hover:shadow-sm transition-all">
+        <UiAppButton to="/products" variant="outline" size="sm">
           <span>More</span>
-          <Icon name="uil:angle-right-b" />
-        </NuxtLink>
+          <Icon name="uil:angle-right-b" class="ml-2" />
+        </UiAppButton>
       </div>
     </div>
     <FeaturesFeatureBar />

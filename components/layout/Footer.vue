@@ -20,11 +20,13 @@
             type="email"
             placeholder="Enter your email..."
             class="w-full bg-stone-800 text-white placeholder-gray-500 rounded-l-md py-3 px-4 border-transparent focus:ring-2 focus:ring-[#8F5D45] focus:ring-inset focus:outline-none transition-colors" />
-          <button
+          <UiAppButton
             type="submit"
-            class="bg-[#8F5D45] text-white font-semibold py-3 px-6 rounded-r-md hover:bg-opacity-90 transition">
+            variant="primary"
+            size="lg"
+            class="!rounded-l-none !rounded-r-lg">
             Subscribe
-          </button>
+          </UiAppButton>
         </form>
       </div>
 
