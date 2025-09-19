@@ -26,24 +26,19 @@
             :class="{
               'bg-gray-700 bg-opacity-50 border-gray-600 text-white placeholder-gray-300':
                 isHomePage,
-              'bg-gray-100 border-gray-300 text-gray-900 placeholder-gray-500':
-                !isHomePage,
+              'bg-[#8F5D45] text-white placeholder-white ': !isHomePage,
             }" />
           <Icon
             name="uil:search"
             class="absolute right-3 top-1/2 -translate-y-1/2"
             :class="{
               'text-gray-300': isHomePage,
-              'text-gray-500': !isHomePage,
+              'text-white': !isHomePage,
             }" />
         </div>
         <Icon
           name="uil:user"
           class="w-6 h-6 hover:text-gray-500 cursor-pointer transition-colors" />
-        <Icon
-          name="uil:shopping-bag"
-          class="w-6 h-6 hover:text-gray-500 cursor-pointer transition-colors" />
-        <Icon name="uil:bars" class="w-7 h-7 md:hidden cursor-pointer" />
       </div>
     </div>
   </header>

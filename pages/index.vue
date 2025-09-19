@@ -1,8 +1,25 @@
 <template>
   <div class="bg-[#fffff0]">
-    <div class="w-screen">
-      <img src="../assets/img/banner.png" alt="banner" class="w-full" />
-    </div>
+    <section
+      class="relative flex text-center h-screen"
+      :style="{
+        backgroundImage: `url('/_nuxt/assets/img/banner.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }">
+      <div class="absolute inset-0 bg-black opacity-40"></div>
+      <div class="relative z-10 text-white p-14 flex justify-center flex-col">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+          Discover Your Next Favourite Thing
+        </h1>
+        <p class="text-base md:text-xl mb-8 leading-relaxed">
+          We've curated the best products from around the globe so you can find
+          everything you need for a better life, all with a few simple clicks.
+          From the latest tech to home essentials, your next discovery awaits.
+        </p>
+      </div>
+    </section>
+
     <div class="mx-auto px-6">
       <div v-if="pending" class="text-center">Loading...</div>
 
@@ -30,6 +47,7 @@
       </div>
     </div>
     <FeaturesFeatureBar />
+    <FeaturesAboutusSection />
   </div>
 </template>
 
