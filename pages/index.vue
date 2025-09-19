@@ -1,9 +1,7 @@
 <template>
   <div> 
-    <div>
-          <h1 class="text-3xl font-bold mb-6">Product Catalog</h1>
-
-            <img src="../assets/img/banner.png" alt="banner">
+    <div class="w-screen">
+            <img src="../assets/img/banner.png" alt="banner" class="w-full">
         </div>
   <div class=" mx-auto p-4">
    
