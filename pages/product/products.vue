@@ -166,6 +166,7 @@
 import { computed, ref } from "vue";
 import ProductCard from "~/components/products/ProductCard.vue";
 import { useProducts } from "~/composables/useProducts";
+import { useSearchQuery } from "~/composables/useStates";
 
 const { getProducts } = useProducts();
 const { data, pending, error } = await getProducts();
@@ -174,6 +175,8 @@ const allProducts = computed(() => data.value?.products || []);
 const selectedCategory = ref("All");
 const selectedPriceRange = ref("All");
 const selectedMinRating = ref(0);
+const filtersOpen = ref(false);
+const searchQuery = useSearchQuery();
 
 const categories = computed(() => {
   if (!allProducts.value) return [];
@@ -182,15 +185,24 @@ const categories = computed(() => {
 });
 
 const filteredProducts = computed(() => {
-  let products = allProducts.value;
+  let productsToFilter = allProducts.value;
+
+  if (searchQuery.value && searchQuery.value.trim() !== "") {
+    const lowerCaseQuery = searchQuery.value.toLowerCase();
+    productsToFilter = productsToFilter.filter((product) =>
+      product.title.toLowerCase().includes(lowerCaseQuery)
+    );
+  }
 
   if (selectedCategory.value !== "All") {
-    products = products.filter((p) => p.category === selectedCategory.value);
+    productsToFilter = productsToFilter.filter(
+      (p) => p.category === selectedCategory.value
+    );
   }
 
   if (selectedPriceRange.value !== "All") {
     const [min, max] = selectedPriceRange.value.split("-").map(Number);
-    products = products.filter((p) => {
+    productsToFilter = productsToFilter.filter((p) => {
       if (max) {
         return p.price >= min && p.price <= max;
       }
@@ -199,11 +211,11 @@ const filteredProducts = computed(() => {
   }
 
   if (selectedMinRating.value > 0) {
-    products = products.filter((p) => p.rating >= selectedMinRating.value);
+    productsToFilter = productsToFilter.filter(
+      (p) => p.rating >= selectedMinRating.value
+    );
   }
 
-  return products;
+  return productsToFilter;
 });
-
-const filtersOpen = ref(false);
 </script>

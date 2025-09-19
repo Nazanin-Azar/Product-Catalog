@@ -18,6 +18,8 @@
       <div class="flex items-center gap-4">
         <div class="relative hidden lg:block">
           <input
+            v-model="searchQuery"
+            @keydown.enter="handleSearch"
             type="text"
             placeholder="Search your product..."
             class="pl-4 pr-10 py-2 rounded-full border focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"
@@ -49,8 +51,18 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
+import { useSearchQuery } from "~/composables/useStates";
+import { useRouter } from "vue-router";
 
 const route = useRoute();
+const router = useRouter();
 
 const isHomePage = computed(() => route.path === "/");
+const searchQuery = useSearchQuery();
+
+function handleSearch() {
+  if (isHomePage.value && searchQuery.value.trim() !== "") {
+    router.push("/product/products");
+  }
+}
 </script>
