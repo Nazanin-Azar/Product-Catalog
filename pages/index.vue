@@ -1,34 +1,32 @@
 <template>
-  <div>
+  <div class="bg-[#fffff0]">
     <div class="w-screen">
       <img src="../assets/img/banner.png" alt="banner" class="w-full" />
     </div>
-    <div class="mx-auto p-4">
+    <div class="mx-auto px-6">
       <div v-if="pending" class="text-center">Loading...</div>
 
       <div v-if="error" class="text-center text-red-500">
         Failed to fetch products. Please try again.
       </div>
 
-      <div
-        v-else
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <ProductCard
-          v-for="product in displayedProducts"
-          :key="product.id"
-          :product="product" />
+      <div v-else>
+        <h1 class="flex justify-center text-4xl m-6 font-bold">Products</h1>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <ProductCard
+            v-for="product in featuredProducts"
+            :key="product.id"
+            :product="product" />
+        </div>
       </div>
-      <div
-        v-if="displayedProductsCount < products.length"
-        class="flex justify-end mt-10 mb-10">
-        <button
-          @click="showMoreProducts"
-          class="text-[#8F5D45] font-medium py-3 px-4 rounded-3xl flex items-center gap-2 hover:shadow-lg transition-colors border border-[#8F5D45]">
-          <span>More </span>
-          <Icon
-            name="uil:angle-right-b"
-            class="transition-transform duration-300 ease-in-out group-hover:translate-x-2" />
-        </button>
+      <div v-if="products.length > 8" class="flex justify-end mt-10 mb-10">
+        <NuxtLink
+          to="/product/products"
+          class="inline-flex items-center gap-2 py-2 px-6 border border-gray-300 rounded-full text-gray-800 font-semibold hover:bg-gray-100 hover:shadow-sm transition-all">
+          <span>More</span>
+          <Icon name="uil:angle-right-b" />
+        </NuxtLink>
       </div>
     </div>
     <FeaturesFeatureBar />
@@ -41,15 +39,10 @@ import ProductCard from "~/components/products/ProductCard.vue";
 import { useProducts } from "~/composables/useProducts";
 
 const { getProducts } = useProducts();
-const { data, pending, error } = getProducts();
+const { data, pending, error } = await getProducts();
 const products = computed(() => data.value?.products || []);
 
-const displayedProductsCount = ref(8);
-const displayedProducts = computed(() => {
-  return products.value.slice(0, displayedProductsCount.value);
+const featuredProducts = computed(() => {
+  return products.value.slice(0, 8);
 });
-
-function showMoreProducts() {
-  displayedProductsCount.value = products.value.length;
-}
 </script>

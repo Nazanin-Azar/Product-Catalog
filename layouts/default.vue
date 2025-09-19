@@ -1,7 +1,7 @@
 <template>
   <div class="overflow-x-hidden">
     <LayoutHeader />
-    <main>
+    <main class="bg-[#fffff0]">
       <slot />
     </main>
   </div>
