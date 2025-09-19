@@ -1,14 +1,20 @@
 <template>
-  <div class="container mx-auto p-4">
-    <h1 class="text-3xl font-bold mb-6">Product Catalog</h1>
+  <div> 
+    <div>
+          <h1 class="text-3xl font-bold mb-6">Product Catalog</h1>
 
+            <img src="../assets/img/banner.png" alt="banner">
+        </div>
+  <div class=" mx-auto p-4">
+   
     <div v-if="pending" class="text-center">Loading...</div>
 
-    <!-- <div v-if="error" class="text-center text-red-500">
+    <div v-if="error" class="text-center text-red-500">
       Failed to fetch products. Please try again.
-    </div> -->
+    </div>
 
     <div
+    v-else
       class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       <ProductCard
         v-for="product in products"
@@ -16,6 +22,7 @@
         :product="product" />
     </div>
 
+  </div>
   </div>
 </template>
 
