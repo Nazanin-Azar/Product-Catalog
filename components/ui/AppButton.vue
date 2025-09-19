@@ -21,10 +21,10 @@ const props = withDefaults(
   }
 );
 
-const tag = computed(() => (props.to ? "NuxtLink" : "button"));
+const tag = computed(() => (props.to ? resolveComponent('NuxtLink') : "button"));
 
 const baseClasses =
-  "inline-flex items-center justify-center font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-200 ease-in-out";
+  "inline-flex items-center justify-center font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-200 ease-in-out cursor-pointer";
 
 const variantClasses = computed(() => {
   switch (props.variant) {

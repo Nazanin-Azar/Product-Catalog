@@ -38,7 +38,7 @@
         </div>
       </div>
       <div v-if="products.length > 8" class="flex justify-end mt-10 mb-10">
-        <UiAppButton to="/products" variant="outline" size="sm">
+        <UiAppButton to="/product/products" variant="outline" size="sm">
           <span>More</span>
           <Icon name="uil:angle-right-b" class="ml-2" />
         </UiAppButton>

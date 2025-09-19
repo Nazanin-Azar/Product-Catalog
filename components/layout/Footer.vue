@@ -19,11 +19,11 @@
             v-model="email"
             type="email"
             placeholder="Enter your email..."
-            class="w-full bg-stone-800 text-white placeholder-gray-500 rounded-l-md py-3 px-4 border-transparent focus:ring-2 focus:ring-[#8F5D45] focus:ring-inset focus:outline-none transition-colors" />
+            class="w-full bg-stone-800 text-white placeholder-gray-500 rounded-l-lg py-2.5 px-4 text-base border-2 border-transparent focus:border-[#8F5D45] focus:outline-none transition-colors" />
           <UiAppButton
             type="submit"
             variant="primary"
-            size="lg"
+            size="md"
             class="!rounded-l-none !rounded-r-lg">
             Subscribe
           </UiAppButton>
