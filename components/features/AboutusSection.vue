@@ -1,6 +1,6 @@
 <template>
-  <div class="py-16 sm:py-24">
-    <div class="container mx-auto px-4">
+  <div class="p-14">
+    <div class="container mx-auto">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <img

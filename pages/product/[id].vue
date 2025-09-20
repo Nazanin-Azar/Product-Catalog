@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto py-12">
+  <div class="container mx-auto py-12 p-12">
     <div v-if="product" class="grid md:grid-cols-2 gap-8">
       <div>
         <img
@@ -8,7 +8,7 @@
           class="w-80 rounded-lg shadow-md bg-white" />
       </div>
       <div>
-        <h1 class="text-4xl font-bold mb-2">{{ product.title }}</h1>
+        <h1 class="md:text-4xl text-2xl font-bold mb-2">{{ product.title }}</h1>
         <p class="text-gray-500 mb-4">
           {{ product.brand }} -
           <span class="font-semibold">{{ product.category }}</span>

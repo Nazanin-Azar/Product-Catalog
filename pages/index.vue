@@ -20,7 +20,7 @@
       </div>
     </section>
 
-    <div class="mx-auto px-6">
+    <div class="mx-auto px-10">
       <div v-if="pending" class="text-center">Loading...</div>
 
       <div v-if="error" class="text-center text-red-500">
@@ -28,7 +28,9 @@
       </div>
 
       <div v-else>
-        <h1 class="flex justify-center text-4xl m-6 font-bold">Products</h1>
+        <h1 class="flex justify-center text-4xl mt-14 mb-10 font-bold">
+          Products
+        </h1>
         <div
           class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           <ProductCard
