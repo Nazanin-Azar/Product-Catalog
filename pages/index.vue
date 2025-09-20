@@ -21,7 +21,9 @@
     </section>
 
     <div class="mx-auto px-10">
-      <div v-if="pending" class="text-center">Loading...</div>
+      <div v-if="pending">
+        <ProductsProductCardSkeleton v-for="product in featuredProducts" />
+      </div>
 
       <div v-if="error" class="text-center text-red-500">
         Failed to fetch products. Please try again.

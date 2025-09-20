@@ -83,7 +83,11 @@
             <span>Filter Products</span>
           </UiAppButton>
         </div>
-        <div v-if="pending" class="text-center py-10">Loading...</div>
+        <div
+          v-if="pending"
+          class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+          <ProductsProductCardSkeleton v-for="product in filteredProducts" />
+        </div>
         <div v-else-if="error" class="text-center text-red-500 py-10">
           Failed to fetch products.
         </div>
