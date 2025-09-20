@@ -1,7 +1,7 @@
 <template>
   <div class="bg-[#fffff0]">
     <section
-      class="relative flex text-center h-screen"
+      class="relative flex text-center h-screen justify-center"
       :style="{
         backgroundImage: `url('/_nuxt/assets/img/banner.png')`,
         backgroundSize: 'cover',

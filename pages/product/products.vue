@@ -98,7 +98,8 @@
           <ProductCard
             v-for="product in filteredProducts"
             :key="product.id"
-            :product="product" />
+            :product="product"
+            loading="lazy" />
         </div>
 
         <div v-else class="text-center py-20 rounded-lg">

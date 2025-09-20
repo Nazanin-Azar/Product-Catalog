@@ -1,5 +1,7 @@
 <template>
-  <footer class="bg-stone-900 text-gray-300 pt-10 pb-8">
+  <footer
+    class="bg-stone-900 text-gray-300 pt-10 pb-8"
+    style="padding-bottom: calc(2rem + env(safe-area-inset-bottom, 0px))">
     <div class="container mx-auto px-4 text-center">
       <div class="max-w-xl mx-auto">
         <NuxtLink

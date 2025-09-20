@@ -1,7 +1,7 @@
 <template>
-  <div class="overflow-x-hidden">
+  <div class="flex flex-col min-h-screen overflow-x-hidden bg-[#fffff0]">
     <LayoutHeader />
-    <main class="bg-[#fffff0]">
+    <main class="flex-grow">
       <slot />
     </main>
     <LayoutFooter />
