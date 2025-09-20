@@ -79,14 +79,10 @@ const email = ref("");
 const toast = useToast();
 
 function handleSubscription() {
-  console.log("Subscribe button clicked!");
-  console.log("Value of email is:", email.value);
   if (!email.value || !email.value.includes("@")) {
-    console.log("22");
     toast.error("Please enter a valid email address.");
     return;
   }
-  console.log("Subscribe button سعزسسثس!");
   toast.success("Thank you for subscribing!");
 
   email.value = "";

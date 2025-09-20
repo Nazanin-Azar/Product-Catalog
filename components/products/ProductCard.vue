@@ -35,5 +35,4 @@ import type { Product } from "~/types/product";
 const props = defineProps<{
   product: Product;
 }>();
-console.log("Data received by ProductCard:", props.product);
 </script>
