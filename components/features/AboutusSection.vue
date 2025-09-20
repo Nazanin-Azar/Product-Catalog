@@ -6,7 +6,8 @@
           <img
             src="~/assets/img/about-us.png"
             alt="Crafting a leather shoe"
-            class="rounded-lg shadow-xl w-full h-auto" />
+            class="rounded-lg shadow-xl w-full h-auto" 
+            loading="lazy"/>
         </div>
 
         <div class="text-left">

@@ -7,7 +7,8 @@
         <img
           :src="product.thumbnail"
           :alt="product.title"
-          class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
+          class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+          loading="lazy" />
       </div>
       <div class="p-3 border-t border-gray-100">
         <h3

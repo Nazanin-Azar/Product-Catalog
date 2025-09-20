@@ -38,7 +38,8 @@
           <ProductCard
             v-for="product in featuredProducts"
             :key="product.id"
-            :product="product" />
+            :product="product"
+            loading="lazy" />
         </div>
       </div>
       <div v-if="products.length > 8" class="flex justify-end mt-10 mb-10">

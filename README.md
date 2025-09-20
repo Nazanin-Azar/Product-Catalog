@@ -18,6 +18,7 @@ This is a sample project for a modern e-commerce store built with Nuxt 3, TypeSc
 - **Global State Management**: Uses useState to manage shared state between components (like the search query).
 - **Optimized Loading**: Implements Skeleton Loaders to improve the user experience while data is being fetched.
 - **Toast Notification System**: Uses vue-sonner to display feedback messages to the user.
+- **SWR** : Handle data fetching and caching efficiently.
 
 ## 🛠️ Tech Stack
 

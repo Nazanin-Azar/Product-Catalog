@@ -5,7 +5,8 @@
         <img
           :src="product.thumbnail"
           :alt="product.title"
-          class="w-80 rounded-lg shadow-md bg-white" />
+          class="w-80 rounded-lg shadow-md bg-white"
+          loading="lazy" />
       </div>
       <div>
         <h1 class="md:text-4xl text-2xl font-bold mb-2">{{ product.title }}</h1>
