@@ -1,12 +1,11 @@
 <template>
   <div class="bg-[#fffff0]">
-    <section
-      class="relative flex text-center h-screen justify-center"
-      :style="{
-        backgroundImage: 'url(/img/banner.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }">
+    <section class="relative flex text-center h-screen justify-center">
+      <img
+        src="/img/banner.webp"
+        alt="Banner"
+        class="absolute inset-0 w-full h-full object-cover"
+        loading="eager" />
       <div class="absolute inset-0 bg-black opacity-40"></div>
       <div class="relative z-10 text-white p-14 flex justify-center flex-col">
         <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
