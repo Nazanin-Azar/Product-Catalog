@@ -3,7 +3,7 @@
     <section
       class="relative flex text-center h-screen justify-center"
       :style="{
-        backgroundImage: `url('/_nuxt/assets/img/banner.png')`,
+        backgroundImage: 'url(/img/banner.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }">

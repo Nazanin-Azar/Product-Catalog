@@ -4,10 +4,10 @@
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <img
-            src="~/assets/img/about-us.png"
+            src="/public/img/about-us.png"
             alt="Crafting a leather shoe"
-            class="rounded-lg shadow-xl w-full h-auto" 
-            loading="lazy"/>
+            class="rounded-lg shadow-xl w-full h-auto"
+            loading="lazy" />
         </div>
 
         <div class="text-left">
