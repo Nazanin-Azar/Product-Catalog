@@ -4,7 +4,7 @@
       class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 overflow-hidden group relative">
       <div
         class="relative w-full h-52 overflow-hidden flex items-center justify-center">
-        <img
+        <NuxtImg
           :src="product.thumbnail"
           :alt="product.title"
           class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"

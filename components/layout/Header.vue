@@ -29,7 +29,7 @@
               'bg-[#8F5D45] text-white placeholder-white ': !isHomePage,
             }" />
           <Icon
-            name="uil:search"
+            name="uil:i-lucide-search"
             class="absolute right-3 top-1/2 -translate-y-1/2"
             :class="{
               'text-gray-300': isHomePage,

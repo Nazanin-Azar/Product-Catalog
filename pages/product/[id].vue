@@ -6,11 +6,10 @@
     <div class="container mx-auto py-12 flex justify-center items-center">
       <div v-if="product" class="grid lg:grid-cols-2 gap-8">
         <div>
-          <img
+          <NuxtImg
             :src="product.thumbnail"
             :alt="product.title"
-            class="w-80 rounded-lg shadow-md bg-white"
-            loading="lazy" />
+            class="w-full sm:w-80 rounded-lg shadow-md bg-white" />
         </div>
         <div>
           <h1 class="lg:text-5xl text-3xl font-bold mb-6">

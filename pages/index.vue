@@ -1,7 +1,7 @@
 <template>
   <div class="bg-[#fffff0]">
     <section class="relative flex text-center h-screen justify-center">
-      <img
+      <NuxtImg
         src="/img/banner.webp"
         alt="Banner"
         class="absolute inset-0 w-full h-full object-cover"
