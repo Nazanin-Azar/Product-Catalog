@@ -36,9 +36,11 @@
               'text-white': !isHomePage,
             }" />
         </div>
-        <Icon
-          name="uil:user"
-          class="w-6 h-6 hover:text-gray-500 cursor-pointer transition-colors" />
+        <NuxtLink to="/login">
+          <Icon
+            name="uil:user"
+            class="w-6 h-6 hover:text-gray-500 cursor-pointer transition-colors" />
+        </NuxtLink>
       </div>
     </div>
   </header>
