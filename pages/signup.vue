@@ -1,10 +1,11 @@
 <template>
   <AuthForm
-    title="Login"
-    btnText="SUBMIT"
+    title="Signup"
+    btnText="Register"
     :fields="[
       { name: 'username', type: 'text', placeholder: 'USERNAME' },
       { name: 'password', type: 'password', placeholder: 'PASSWORD' },
+      { name: 'email', type: 'email', placeholder: 'EMAIL' },
     ]"
     redirectTo="/" />
 </template>
