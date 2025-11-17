@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col min-h-screen overflow-x-hidden bg-[#fffff0]">
+  <div class="flex flex-col min-h-screen overflow-x-hidden bg-background">
     <LayoutHeader />
     <main class="flex-grow">
       <slot />

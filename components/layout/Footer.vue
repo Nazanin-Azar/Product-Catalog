@@ -8,7 +8,7 @@
           <Icon name="uil:cube" class="w-8 h-8 text-white" />
           <span class="text-xl font-bold text-white">Product Catalog</span>
         </NuxtLink>
-        <p class="text-xl text-gray-400 mb-6">
+        <p class="text-xl text-graylight mb-6">
           Smarter shopping, simpler living.
         </p>
 
@@ -19,7 +19,7 @@
             v-model="email"
             type="email"
             placeholder="Enter your email..."
-            class="w-full bg-stone-800 text-white placeholder-gray-500 rounded-l-lg py-2.5 px-4 text-base border-2 border-transparent focus:border-[#8F5D45] focus:outline-none transition-colors" />
+            class="w-full bg-input text-white placeholder-graylight rounded-l-lg py-2.5 px-4 text-base border-2 border-transparent focus:border-primary focus:outline-none transition-colors" />
           <UiAppButton
             type="submit"
             variant="primary"

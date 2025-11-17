@@ -32,11 +32,11 @@ const variantClasses = computed(() => {
   switch (props.variant) {
     case "primary":
     default:
-      return "bg-[#8F5D45] text-white hover:bg-opacity-60 border-2 border-transparent";
+      return "bg-primary text-white hover:bg-opacity-60 border-2 border-transparent";
     case "accordion":
-      return "bg-transparent text-current hover:bg-gray-100";
+      return "bg-transparent text-current hover:bg-muted";
     case "outline":
-      return "bg-transparent text-[#1c1917] hover:bg-[#8F5D45] hover:bg-opacity-20 border-2 border-[#1c1917]";
+      return "bg-transparent text-secondary hover:bg-primary hover:bg-opacity-20 border-2 border-secondary";
   }
 });
 

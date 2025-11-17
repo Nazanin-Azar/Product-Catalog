@@ -15,21 +15,21 @@
           <h1 class="lg:text-5xl text-3xl font-bold mb-6">
             {{ product.title }}
           </h1>
-          <p class="text-gray-500 mb-4">
+          <p class="text-graylight mb-4">
             {{ product.brand }} -
             <span class="font-semibold">{{ product.category }}</span>
           </p>
           <p class="text-xl mb-4">{{ product.description }}</p>
           <div class="flex items-center justify-between mb-4">
-            <span class="text-3xl font-bold text-[#8F5D45]"
+            <span class="text-3xl font-bold text-primary"
               >${{ product.price }}</span
             >
             <div class="flex items-center gap-1 text-lg">
-              <Icon name="uil:star" class="text-yellow-400" />
+              <Icon name="uil:star" class="text-yellowlight" />
               <span>{{ product.rating }} / 5</span>
             </div>
           </div>
-          <p class="text-sm text-gray-700">
+          <p class="text-sm text-graydark">
             Only <span class="font-bold">{{ product.stock }}</span> left in
             stock!
           </p>

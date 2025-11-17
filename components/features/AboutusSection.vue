@@ -11,10 +11,10 @@
         </div>
 
         <div class="text-left">
-          <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
+          <h2 class="text-3xl sm:text-4xl font-bold text-graydarker mb-4">
             About Us
           </h2>
-          <p class="text-gray-600 leading-relaxed mb-8">
+          <p class="text-gray-500 leading-relaxed mb-8">
             Welcome to our store! We believe shopping should be easy and
             exciting. That's why we've gathered a wide selection of quality
             products to fit every aspect of your life. From the latest gadgets

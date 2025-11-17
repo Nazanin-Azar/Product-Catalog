@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#fffff0]">
+  <div class="bg-background">
     <section class="relative flex text-center h-screen justify-center">
       <NuxtImg
         src="/img/banner.webp"
@@ -24,7 +24,7 @@
         <ProductsProductCardSkeleton v-for="product in featuredProducts" />
       </div>
 
-      <div v-if="error" class="text-center text-red-500">
+      <div v-if="error" class="text-center text-error">
         Failed to fetch products. Please try again.
       </div>
 

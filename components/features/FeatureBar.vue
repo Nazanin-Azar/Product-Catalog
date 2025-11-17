@@ -1,12 +1,12 @@
 <template>
-  <div class="bg-[#1c1917] py-12 md:py-16 p-0">
+  <div class="bg-secondary py-12 md:py-16 p-0">
     <div class="container mx-auto">
       <div
         class="flex flex-col md:flex-row justify-around items-center gap-y-8 md:gap-0">
         <template v-for="(feature, index) in features" :key="index">
           <div class="flex items-center gap-4 w-full lg:w-auto px-4">
             <div>
-              <Icon :name="feature.icon" class="text-4xl text-[#8F5D45]" />
+              <Icon :name="feature.icon" class="text-4xl text-primary" />
             </div>
             <div class="text-left">
               <h3 class="font-semibold text-white">{{ feature.title }}</h3>
@@ -16,7 +16,7 @@
 
           <div
             v-if="index < features.length - 1"
-            class="hidden md:block h-20 w-px bg-gray-600"></div>
+            class="hidden md:block h-20 w-px bg-graylight"></div>
         </template>
       </div>
     </div>

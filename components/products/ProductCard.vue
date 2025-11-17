@@ -10,19 +10,19 @@
           class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
           loading="lazy" />
       </div>
-      <div class="p-3 border-t border-gray-100">
+      <div class="p-3 border-t border-muted">
         <h3
-          class="text-base font-semibold text-gray-800 mb-1 leading-tight truncate">
+          class="text-base font-semibold text-graydarker mb-1 leading-tight truncate">
           {{ product.title }}
         </h3>
-        <p class="text-sm text-gray-500">{{ product.category }}</p>
+        <p class="text-sm text-graylight">{{ product.category }}</p>
         <div class="flex justify-between items-center mt-3">
-          <span class="font-bold text-base text-[#8F5D45]"
+          <span class="font-bold text-base text-primary"
             >${{ product.price }}</span
           >
           <div class="flex items-center gap-1">
-            <Icon name="uil:star" class="text-yellow-400" />
-            <span class="text-sm text-gray-600">{{ product.rating }}</span>
+            <Icon name="uil:star" class="text-yellowlight" />
+            <span class="text-sm text-graylight">{{ product.rating }}</span>
           </div>
         </div>
       </div>
