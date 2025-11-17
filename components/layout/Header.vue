@@ -11,7 +11,10 @@
         <Icon
           name="uil:cube"
           class="w-8 h-8"
-          :class="{ 'text-white': isHomePage, 'text-graydarker': !isHomePage }" />
+          :class="{
+            'text-white': isHomePage,
+            'text-graydarker': !isHomePage,
+          }" />
         <span class="text-xl font-bold">Catalog</span>
       </NuxtLink>
 
@@ -36,7 +39,13 @@
               'text-white': !isHomePage,
             }" />
         </div>
-        <NuxtLink to="/login">
+        <div v-if="user.loggedIn" class="text-xl font-semibold">
+          {{ user.name }}
+          <Icon
+            name="uil:user"
+            class="w-6 h-6 hover:text-graylight transition-colors" />
+        </div>
+        <NuxtLink v-else to="/login">
           <Icon
             name="uil:user"
             class="w-6 h-6 hover:text-graylight cursor-pointer transition-colors" />
@@ -50,6 +59,9 @@
 import { computed } from "vue";
 import { useSearchQuery } from "~/composables/useStates";
 import { useRouter } from "vue-router";
+import { useUser } from "~/composables/useStates";
+
+const user = useUser();
 
 const route = useRoute();
 const router = useRouter();

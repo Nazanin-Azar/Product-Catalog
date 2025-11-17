@@ -9,7 +9,7 @@
         <div
           class="border border-[hsla(0,0%,65%,0.158)] shadow-[0_0_36px_1px_rgba(0,0,0,0.2)] rounded-xl backdrop-blur-md p-8 outline-none z-40 w-11/12 sm:w-96 md:w-90">
           <NuxtImg
-            src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png"
+            src="/img/illustration.png"
             alt="illustration"
             class="absolute -top-12 right-0 w-full" />
           <h1 class="text-white text-4xl">{{ title }}</h1>
@@ -57,6 +57,7 @@
 import { useToast } from "vue-toastification";
 import { useRouter } from "vue-router";
 import { reactive } from "vue";
+import { useUser } from "~/composables/useStates";
 
 const props = defineProps({
   title: String,
@@ -87,6 +88,8 @@ onMounted(() => {
   }
 });
 
+const user = useUser();
+
 const handleSubmit = (e) => {
   e.preventDefault();
 
@@ -102,6 +105,11 @@ const handleSubmit = (e) => {
   });
 
   if (!valid) return;
+
+  user.value = {
+    name: formData.username || "User",
+    loggedIn: true,
+  };
   toast.success(`${props.title} successful! ✅`);
   router.push(props.redirectTo);
 };
